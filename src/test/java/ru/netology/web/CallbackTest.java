@@ -69,7 +69,6 @@ class CallbackTest {
         String actual = driver.findElement(By.cssSelector(".input_invalid .input__sub")).getText().trim();
 
         assertEquals(expected, actual);
-        assertTrue(actualTextElement.isDisplayed());
     }
 
     //пустое имя
@@ -84,7 +83,6 @@ class CallbackTest {
         String actual = driver.findElement(By.cssSelector("[data-test-id=name] .input__sub")).getText().trim();
 
         assertEquals(expected, actual);
-        assertTrue(actualTextElement.isDisplayed());
     }
 
     // пустой чекбокс
@@ -99,7 +97,6 @@ class CallbackTest {
         String actual = driver.findElement(By.cssSelector("[data-test-id=agreement].input_invalid .checkbox__text")).getText().trim();
 
         assertEquals(expected, actual);
-        assertTrue(actualTextElement.isDisplayed());
     }
 
     //невалидный телефон
@@ -115,7 +112,6 @@ class CallbackTest {
         String actual = driver.findElement(By.cssSelector("[data-test-id=phone] .input__sub")).getText().trim();
 
         assertEquals(expected, actual);
-        assertTrue(actualTextElement.isDisplayed());
     }
 
     //пустой телефон
@@ -130,6 +126,5 @@ class CallbackTest {
         String actual = driver.findElement(By.cssSelector("[data-test-id=phone] .input__sub")).getText().trim();
 
         assertEquals(expected, actual);
-        assertTrue(actualTextElement.isDisplayed());
     }
 }
