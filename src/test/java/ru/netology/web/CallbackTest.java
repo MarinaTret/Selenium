@@ -81,7 +81,7 @@ class CallbackTest {
         driver.findElement(By.tagName("button")).click();
 
         String expected = "Поле обязательно для заполнения";
-        String actual = driver.findElement(By.cssSelector(".input_invalid .input__sub")).getText().trim();
+        String actual = driver.findElement(By.cssSelector("[data-test-id=name] .input__sub")).getText().trim();
 
         assertEquals(expected, actual);
         assertTrue(actualTextElement.isDisplayed());
@@ -96,7 +96,7 @@ class CallbackTest {
         driver.findElement(By.tagName("button")).click();
 
         String expected = "Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй";
-        String actual = driver.findElement(By.cssSelector(".input_invalid .checkbox__text")).getText().trim();
+        String actual = driver.findElement(By.cssSelector("[data-test-id=agreement].input_invalid .checkbox__text")).getText().trim();
 
         assertEquals(expected, actual);
         assertTrue(actualTextElement.isDisplayed());
@@ -112,7 +112,7 @@ class CallbackTest {
         driver.findElement(By.tagName("button")).click();
 
         String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.";
-        String actual = driver.findElement(By.cssSelector(".input_invalid .input__sub")).getText().trim();
+        String actual = driver.findElement(By.cssSelector("[data-test-id=phone] .input__sub")).getText().trim();
 
         assertEquals(expected, actual);
         assertTrue(actualTextElement.isDisplayed());
@@ -127,11 +127,9 @@ class CallbackTest {
         driver.findElement(By.tagName("button")).click();
 
         String expected = "Поле обязательно для заполнения";
-        String actual = driver.findElement(By.cssSelector(".input_invalid .input__sub")).getText().trim();
+        String actual = driver.findElement(By.cssSelector("[data-test-id=phone] .input__sub")).getText().trim();
 
         assertEquals(expected, actual);
         assertTrue(actualTextElement.isDisplayed());
     }
-
-
 }
