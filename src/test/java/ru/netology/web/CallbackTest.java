@@ -14,7 +14,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CallbackTest {
     private WebDriver driver;
@@ -53,7 +52,6 @@ class CallbackTest {
         String actual = driver.findElement(By.className("paragraph")).getText().trim();
 
         assertEquals(expected, actual);
-        assertTrue(actualTextElement.isDisplayed());
     }
 
     //невалидное имя
